@@ -1,0 +1,79 @@
+object MainForm: TMainForm
+  Left = 3800
+  Height = 600
+  Top = 285
+  Width = 820
+  AllowDropFiles = True
+  Caption = 'Binary to C-Header Conversion'
+  ClientHeight = 600
+  ClientWidth = 820
+  Constraints.MinHeight = 600
+  Constraints.MinWidth = 820
+  OnDropFiles = FormDropFiles
+  Position = poDefault
+  LCLVersion = '3.2.0.0'
+  object lblFilename: TLabel
+    Left = 24
+    Height = 16
+    Top = 564
+    Width = 54
+    Anchors = [akLeft, akBottom]
+    Caption = 'Filename'
+    Font.Color = clRed
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object btnCopyToClipboard: TButton
+    Left = 564
+    Height = 25
+    Top = 560
+    Width = 148
+    Anchors = [akRight, akBottom]
+    Caption = 'Copy to Clipboard'
+    TabOrder = 0
+    OnClick = btnCopyToClipboardClick
+  end
+  object btnExit: TButton
+    Left = 724
+    Height = 25
+    Top = 560
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Exit'
+    TabOrder = 1
+    OnClick = btnExitClick
+  end
+  object memoText: TMemo
+    Left = 12
+    Height = 464
+    Top = 80
+    Width = 796
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Font.Name = 'Courier'
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 2
+  end
+  object Panel1: TPanel
+    Left = 12
+    Height = 50
+    Top = 12
+    Width = 796
+    Align = alTop
+    BorderSpacing.Around = 12
+    BevelInner = bvLowered
+    Caption = 'Drop binary file here to create header file'
+    TabOrder = 3
+  end
+  object btnAbout: TButton
+    Left = 512
+    Height = 25
+    Top = 560
+    Width = 43
+    Caption = '?'
+    TabOrder = 4
+    OnClick = btnAboutClick
+  end
+end
